@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign in — CleverFund</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#eff6ff', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8' }
+          },
+          boxShadow: { soft: '0 4px 24px -4px rgba(37, 99, 235, 0.12)' }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 antialiased">
+  <div class="flex min-h-screen flex-col lg:flex-row">
+    <!-- Brand panel -->
+    <div class="relative flex flex-1 flex-col justify-between bg-gradient-to-br from-brand-600 via-brand-700 to-slate-900 px-8 py-12 text-white lg:max-w-md">
+      <div class="login-brand">
+        <div class="flex items-center gap-3">
+          <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 text-lg font-bold shadow-lg backdrop-blur">
+            C
+          </div>
+          <span class="text-xl font-semibold tracking-tight">CleverFund</span>
+        </div>
+        <div class="mt-16 max-w-sm">
+          <h1 class="text-3xl font-bold leading-tight">Predict startup success with confidence.</h1>
+          <p class="mt-4 text-sm text-brand-100/90">
+            Sign in to access your dashboard, run predictions, and explore analytics.
+          </p>
+        </div>
+      </div>
+      <p class="text-xs text-brand-200/80">© 2025 CleverFund</p>
+    </div>
+
+    <!-- Form -->
+    <div class="flex flex-1 items-center justify-center px-4 py-12 sm:px-8">
+      <div class="login-card w-full max-w-md rounded-2xl border border-slate-100 bg-white p-8 shadow-soft">
+
+        <!-- Tab switcher -->
+        <div class="flex gap-2 mb-6">
+          <button id="tab-login" onclick="showTab('login')"
+            class="flex-1 rounded-xl py-2 text-sm font-semibold transition bg-brand-600 text-white">
+            Sign In
+          </button>
+          <button id="tab-register" onclick="showTab('register')"
+            class="flex-1 rounded-xl py-2 text-sm font-semibold transition bg-slate-100 text-slate-600 hover:bg-slate-200">
+            Register
+          </button>
+        </div>
+
+        {% if error %}
+        <div class="mt-2 mb-4 rounded-xl border border-rose-200 bg-rose-50 px-3 py-2 text-sm text-rose-800" role="alert">
+          {{ error }}
+        </div>
+        {% endif %}
+
+        <div id="msg-box" class="hidden mt-2 mb-4 rounded-xl px-3 py-2 text-sm" role="alert"></div>
+
+        <!-- LOGIN FORM -->
+        <div id="form-login">
+          <h2 class="text-xl font-bold text-slate-900">Welcome back</h2>
+          <p class="mt-1 text-sm text-slate-500">Enter your credentials to continue.</p>
+
+          <form method="post" action="{{ url_for('login') }}{% if request.args.get('next') %}?next={{ request.args.get('next') | urlencode }}{% endif %}" class="mt-6 space-y-4">
+            <div>
+              <label for="email" class="mb-1 block text-sm font-medium text-slate-700">Email</label>
+              <input id="email" name="email" type="text" autocomplete="username" required
+                class="w-full rounded-xl border border-slate-200 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
+                placeholder="you@company.com" />
+            </div>
+            <div>
+              <label for="password" class="mb-1 block text-sm font-medium text-slate-700">Password</label>
+              <input id="password" name="password" type="password" autocomplete="current-password" required
+                class="w-full rounded-xl border border-slate-200 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
+                placeholder="••••••••" />
+            </div>
+            <button type="submit"
+              class="w-full rounded-xl bg-brand-600 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+              Sign in
+            </button>
+          </form>
+          <p class="mt-4 text-center text-xs text-slate-500">Don't have an account? <a href="#" onclick="showTab('register')" class="text-brand-600 font-medium hover:underline">Register</a></p>
+        </div>
+
+        <!-- REGISTER FORM -->
+        <div id="form-register" class="hidden">
+          <h2 class="text-xl font-bold text-slate-900">Create account</h2>
+          <p class="mt-1 text-sm text-slate-500">Sign up to start predicting startup success.</p>
+
+          <form id="register-form" class="mt-6 space-y-4" onsubmit="return doRegister(event)">
+            <div>
+              <label for="reg-email" class="mb-1 block text-sm font-medium text-slate-700">Email</label>
+              <input id="reg-email" type="email" required
+                class="w-full rounded-xl border border-slate-200 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
+                placeholder="you@company.com" />
+            </div>
+            <div>
+              <label for="reg-password" class="mb-1 block text-sm font-medium text-slate-700">Password</label>
+              <input id="reg-password" type="password" required minlength="6"
+                class="w-full rounded-xl border border-slate-200 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
+                placeholder="At least 6 characters" />
+            </div>
+            <button type="submit"
+              class="w-full rounded-xl bg-brand-600 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+              Create Account
+            </button>
+          </form>
+          <p class="mt-4 text-center text-xs text-slate-500">Already have an account? <a href="#" onclick="showTab('login')" class="text-brand-600 font-medium hover:underline">Sign in</a></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tab) {
+      const loginForm = document.getElementById('form-login');
+      const regForm   = document.getElementById('form-register');
+      const tabLogin  = document.getElementById('tab-login');
+      const tabReg    = document.getElementById('tab-register');
+      const msgBox    = document.getElementById('msg-box');
+      msgBox.classList.add('hidden');
+
+      if (tab === 'register') {
+        loginForm.classList.add('hidden');
+        regForm.classList.remove('hidden');
+        tabLogin.className  = 'flex-1 rounded-xl py-2 text-sm font-semibold transition bg-slate-100 text-slate-600 hover:bg-slate-200';
+        tabReg.className    = 'flex-1 rounded-xl py-2 text-sm font-semibold transition bg-brand-600 text-white';
+      } else {
+        regForm.classList.add('hidden');
+        loginForm.classList.remove('hidden');
+        tabLogin.className  = 'flex-1 rounded-xl py-2 text-sm font-semibold transition bg-brand-600 text-white';
+        tabReg.className    = 'flex-1 rounded-xl py-2 text-sm font-semibold transition bg-slate-100 text-slate-600 hover:bg-slate-200';
+      }
+    }
+
+    async function doRegister(e) {
+      e.preventDefault();
+      const email    = document.getElementById('reg-email').value.trim();
+      const password = document.getElementById('reg-password').value;
+      const msgBox   = document.getElementById('msg-box');
+
+      try {
+        const res  = await fetch('/api/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+        const data = await res.json();
+
+        if (data.ok) {
+          msgBox.className = 'mt-2 mb-4 rounded-xl border border-green-200 bg-green-50 px-3 py-2 text-sm text-green-800';
+          msgBox.textContent = 'Account created! Switching to sign in...';
+          msgBox.classList.remove('hidden');
+          setTimeout(() => showTab('login'), 1500);
+        } else {
+          msgBox.className = 'mt-2 mb-4 rounded-xl border border-rose-200 bg-rose-50 px-3 py-2 text-sm text-rose-800';
+          msgBox.textContent = data.error || 'Registration failed.';
+          msgBox.classList.remove('hidden');
+        }
+      } catch (err) {
+        msgBox.className = 'mt-2 mb-4 rounded-xl border border-rose-200 bg-rose-50 px-3 py-2 text-sm text-rose-800';
+        msgBox.textContent = 'Network error — is the server running?';
+        msgBox.classList.remove('hidden');
+      }
+    }
+  </script>
+</body>
+</html>

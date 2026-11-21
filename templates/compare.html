@@ -1,0 +1,316 @@
+{% extends "base.html" %}
+{% block title %}Compare Startups — CleverFund{% endblock %}
+
+{% block content %}
+<section class="space-y-6">
+  <div>
+    <p class="text-sm text-slate-500">Dashboard <span class="mx-1">›</span> Compare Startups</p>
+    <h1 class="mt-1 text-4xl font-bold tracking-tight text-slate-900">Compare Two Startups</h1>
+    <p class="mt-2 text-sm text-slate-500">Side-by-side analysis of two startup predictions to understand differences and opportunities.</p>
+  </div>
+
+  <div class="grid gap-6 lg:grid-cols-2">
+    <!-- Startup 1 Form -->
+    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+      <h2 class="flex items-center gap-2 text-xl font-semibold text-slate-900 mb-4">
+        <span class="text-brand-600">🏢</span>
+        Startup 1 Details
+      </h2>
+
+      <form id="compare-form-1" class="space-y-4">
+        <div>
+          <label for="startup_name_1" class="mb-1.5 block text-sm font-medium text-slate-700">Startup Name</label>
+          <input id="startup_name_1" type="text" placeholder="e.g. Velocity AI" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+        </div>
+        <div>
+          <label for="funding_1" class="mb-1.5 block text-sm font-medium text-slate-700">Funding Amount (₹)</label>
+          <input id="funding_1" type="number" placeholder="5000000" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+        </div>
+        <div>
+          <label for="employees_1" class="mb-1.5 block text-sm font-medium text-slate-700">Team Size</label>
+          <input id="employees_1" type="number" placeholder="50" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+        </div>
+        <div>
+          <label for="industry_1" class="mb-1.5 block text-sm font-medium text-slate-700">Industry</label>
+          <select id="industry_1" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20">
+            <option value="" selected disabled>Select industry</option>
+            <option value="Technology / Software">Technology / Software</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Finance / Fintech">Finance / Fintech</option>
+            <option value="Retail / E-commerce">Retail / E-commerce</option>
+            <option value="Manufacturing">Manufacturing</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="revenue_1" class="mb-1.5 block text-sm font-medium text-slate-700">Revenue (₹)</label>
+          <input id="revenue_1" type="number" placeholder="2000000" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+        </div>
+        <div>
+          <label for="location_1" class="mb-1.5 block text-sm font-medium text-slate-700">Location</label>
+          <input id="location_1" type="text" placeholder="e.g. Bangalore, Karnataka" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+        </div>
+      </form>
+    </article>
+
+    <!-- Startup 2 Form -->
+    <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+      <h2 class="flex items-center gap-2 text-xl font-semibold text-slate-900 mb-4">
+        <span class="text-brand-600">🏢</span>
+        Startup 2 Details
+      </h2>
+
+      <form id="compare-form-2" class="space-y-4">
+        <div>
+          <label for="startup_name_2" class="mb-1.5 block text-sm font-medium text-slate-700">Startup Name</label>
+          <input id="startup_name_2" type="text" placeholder="e.g. GrowthMax" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+        </div>
+        <div>
+          <label for="funding_2" class="mb-1.5 block text-sm font-medium text-slate-700">Funding Amount (₹)</label>
+          <input id="funding_2" type="number" placeholder="3000000" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+        </div>
+        <div>
+          <label for="employees_2" class="mb-1.5 block text-sm font-medium text-slate-700">Team Size</label>
+          <input id="employees_2" type="number" placeholder="25" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+        </div>
+        <div>
+          <label for="industry_2" class="mb-1.5 block text-sm font-medium text-slate-700">Industry</label>
+          <select id="industry_2" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20">
+            <option value="" selected disabled>Select industry</option>
+            <option value="Technology / Software">Technology / Software</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Finance / Fintech">Finance / Fintech</option>
+            <option value="Retail / E-commerce">Retail / E-commerce</option>
+            <option value="Manufacturing">Manufacturing</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="revenue_2" class="mb-1.5 block text-sm font-medium text-slate-700">Revenue (₹)</label>
+          <input id="revenue_2" type="number" placeholder="1000000" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+        </div>
+        <div>
+          <label for="location_2" class="mb-1.5 block text-sm font-medium text-slate-700">Location</label>
+          <input id="location_2" type="text" placeholder="e.g. Mumbai, Maharashtra" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+        </div>
+      </form>
+    </article>
+  </div>
+
+  <!-- Compare Button -->
+  <div class="flex justify-center">
+    <button id="compare-btn" type="button" class="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700 focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 disabled:opacity-50">
+      <span id="compare-btn-text">🔍 Compare Startups</span>
+      <div id="compare-spinner" class="hidden h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
+    </button>
+  </div>
+
+  <!-- Comparison Results -->
+  <div id="comparison-results" class="hidden space-y-6">
+    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+      <h3 class="text-lg font-semibold text-slate-900 mb-4">Comparison Overview</h3>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="space-y-3">
+          <h4 class="font-medium text-slate-800">Startup 1: <span id="startup1-name">Velocity AI</span></h4>
+          <div class="flex items-center gap-3">
+            <div class="flex-1 h-3 rounded-full bg-slate-100">
+              <div id="startup1-bar" class="h-full rounded-full bg-emerald-500" style="width: 75%"></div>
+            </div>
+            <span id="startup1-prob" class="text-sm font-semibold text-slate-700">75%</span>
+          </div>
+          <p id="startup1-result" class="text-sm text-slate-600">Success</p>
+        </div>
+        <div class="space-y-3">
+          <h4 class="font-medium text-slate-800">Startup 2: <span id="startup2-name">GrowthMax</span></h4>
+          <div class="flex items-center gap-3">
+            <div class="flex-1 h-3 rounded-full bg-slate-100">
+              <div id="startup2-bar" class="h-full rounded-full bg-rose-500" style="width: 45%"></div>
+            </div>
+            <span id="startup2-prob" class="text-sm font-semibold text-slate-700">45%</span>
+          </div>
+          <p id="startup2-result" class="text-sm text-slate-600">Needs Attention</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailed Comparison Table -->
+    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+      <h3 class="text-lg font-semibold text-slate-900 mb-4">Detailed Comparison</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-slate-200">
+              <th class="text-left py-2 font-medium text-slate-700">Metric</th>
+              <th class="text-center py-2 font-medium text-slate-700">Startup 1</th>
+              <th class="text-center py-2 font-medium text-slate-700">Startup 2</th>
+              <th class="text-center py-2 font-medium text-slate-700">Difference</th>
+            </tr>
+          </thead>
+          <tbody id="comparison-table-body" class="divide-y divide-slate-100">
+            <!-- Table rows will be populated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Key Insights -->
+    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+      <h3 class="text-lg font-semibold text-slate-900 mb-4">Key Insights</h3>
+      <div id="comparison-insights" class="space-y-3">
+        <!-- Insights will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const compareBtn = document.getElementById('compare-btn');
+  const compareSpinner = document.getElementById('compare-spinner');
+  const compareBtnText = document.getElementById('compare-btn-text');
+  const resultsDiv = document.getElementById('comparison-results');
+
+  compareBtn.addEventListener('click', async function() {
+    // Get form data
+    const startup1 = {
+      name: document.getElementById('startup_name_1').value.trim(),
+      funding: parseFloat(document.getElementById('funding_1').value),
+      employees: parseInt(document.getElementById('employees_1').value),
+      industry: document.getElementById('industry_1').value,
+      revenue: parseFloat(document.getElementById('revenue_1').value),
+      location: document.getElementById('location_1').value.trim()
+    };
+
+    const startup2 = {
+      name: document.getElementById('startup_name_2').value.trim(),
+      funding: parseFloat(document.getElementById('funding_2').value),
+      employees: parseInt(document.getElementById('employees_2').value),
+      industry: document.getElementById('industry_2').value,
+      revenue: parseFloat(document.getElementById('revenue_2').value),
+      location: document.getElementById('location_2').value.trim()
+    };
+
+    // Validation
+    if (!startup1.name || !startup2.name || isNaN(startup1.funding) || isNaN(startup2.funding)) {
+      alert('Please fill in all required fields for both startups');
+      return;
+    }
+
+    // Show loading
+    compareBtn.disabled = true;
+    compareSpinner.classList.remove('hidden');
+    compareBtnText.textContent = 'Comparing...';
+
+    try {
+      const response = await fetch('/api/compare-startups', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ startup1, startup2 }),
+        credentials: 'same-origin'
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Comparison failed');
+      }
+
+      // Display results
+      displayComparisonResults(data);
+      resultsDiv.classList.remove('hidden');
+      resultsDiv.scrollIntoView({ behavior: 'smooth' });
+
+    } catch (error) {
+      alert('Error: ' + error.message);
+    } finally {
+      compareBtn.disabled = false;
+      compareSpinner.classList.add('hidden');
+      compareBtnText.textContent = '🔍 Compare Startups';
+    }
+  });
+
+  function displayComparisonResults(data) {
+    const { startup1, startup2, insights } = data;
+
+    // Update overview
+    document.getElementById('startup1-name').textContent = startup1.name;
+    document.getElementById('startup1-prob').textContent = window.formatPercentage(startup1.probability);
+    document.getElementById('startup1-result').textContent = startup1.result;
+    document.getElementById('startup1-bar').style.width = window.formatPercentage(startup1.probability);
+    document.getElementById('startup1-bar').className = 'h-full rounded-full ' +
+      (startup1.result === 'Success' ? 'bg-emerald-500' : 'bg-rose-500');
+
+    document.getElementById('startup2-name').textContent = startup2.name;
+    document.getElementById('startup2-prob').textContent = window.formatPercentage(startup2.probability);
+    document.getElementById('startup2-result').textContent = startup2.result;
+    document.getElementById('startup2-bar').style.width = window.formatPercentage(startup2.probability);
+    document.getElementById('startup2-bar').className = 'h-full rounded-full ' +
+      (startup2.result === 'Success' ? 'bg-emerald-500' : 'bg-rose-500');
+
+    // Update comparison table
+    const tableBody = document.getElementById('comparison-table-body');
+    tableBody.innerHTML = '';
+
+    const metrics = [
+      { key: 'funding', label: 'Funding (₹)', format: formatCurrency, isNumeric: true },
+      { key: 'employees', label: 'Team Size', format: (v) => v, isNumeric: true },
+      { key: 'industry', label: 'Industry', format: (v) => v, isNumeric: false },
+      { key: 'revenue', label: 'Revenue (₹)', format: formatCurrency, isNumeric: true },
+      { key: 'location', label: 'Location', format: (v) => v, isNumeric: false },
+      { key: 'probability', label: 'Success Probability', format: (v) => window.formatPercentage(v), isNumeric: true },
+      { key: 'result', label: 'Prediction', format: (v) => v, isNumeric: false }
+    ];
+
+    metrics.forEach(metric => {
+      const row = document.createElement('tr');
+      const val1 = startup1[metric.key];
+      const val2 = startup2[metric.key];
+      let diff = null;
+      let diffText = '-';
+      let diffClass = 'text-slate-500';
+
+      if (metric.isNumeric) {
+        diff = val1 - val2;
+        if (diff !== 0) {
+          if (metric.key === 'probability') {
+            diffText = (diff > 0 ? '+' : '') + diff.toFixed(1);
+          } else if (metric.key === 'employees') {
+            diffText = (diff > 0 ? '+' : '') + Math.round(diff);
+          } else {
+            diffText = (diff > 0 ? '+₹' : '-₹') + Math.abs(diff).toLocaleString('en-IN', {maximumFractionDigits: 0});
+          }
+          diffClass = diff > 0 ? 'text-emerald-600 font-medium' : 'text-rose-600 font-medium';
+        }
+      }
+
+      row.innerHTML = `
+        <td class="py-2 font-medium text-slate-700">${metric.label}</td>
+        <td class="py-2 text-center text-slate-600">${metric.format(val1)}</td>
+        <td class="py-2 text-center text-slate-600">${metric.format(val2)}</td>
+        <td class="py-2 text-center ${diffClass}">${diffText}</td>
+      `;
+      tableBody.appendChild(row);
+    });
+
+    // Update insights
+    const insightsDiv = document.getElementById('comparison-insights');
+    insightsDiv.innerHTML = '';
+
+    insights.forEach(insight => {
+      const insightEl = document.createElement('div');
+      insightEl.className = 'p-3 rounded-lg border border-slate-200 bg-slate-50';
+      insightEl.innerHTML = `
+        <p class="text-sm text-slate-700">${insight}</p>
+      `;
+      insightsDiv.appendChild(insightEl);
+    });
+  }
+
+  function formatCurrency(num) {
+    if (num >= 1_000_000) return '₹' + (num / 1_000_000).toFixed(1) + 'M';
+    if (num >= 1_000) return '₹' + (num / 1_000).toFixed(0) + 'K';
+    return '₹' + num.toFixed(0);
+  }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,622 @@
+{% extends "base.html" %}
+{% block title %}My Predictions — CleverFund{% endblock %}
+
+{% block content %}
+<section class="space-y-6">
+  <div>
+    <p class="text-sm text-slate-500">Dashboard <span class="mx-1">›</span> My Predictions</p>
+    <h1 class="mt-1 text-4xl font-bold tracking-tight text-slate-900">Prediction History</h1>
+    <p class="mt-2 text-sm text-slate-500">View and analyze all your previous startup predictions with detailed insights.</p>
+  </div>
+
+  <!-- Stats Overview -->
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="card-hover rounded-2xl border border-slate-100 bg-white p-5 shadow-soft">
+      <p class="text-sm font-medium text-slate-500">Total Predictions</p>
+      <p id="total-predictions" class="mt-2 text-3xl font-bold text-slate-900">-</p>
+      <p class="mt-1 text-xs text-slate-400">All time</p>
+    </div>
+    <div class="card-hover rounded-2xl border border-slate-100 bg-white p-5 shadow-soft">
+      <p class="text-sm font-medium text-slate-500">Success Rate</p>
+      <p id="success-rate" class="mt-2 text-3xl font-bold text-emerald-600">-</p>
+      <p class="mt-1 text-xs text-slate-400">Predicted successes</p>
+    </div>
+    <div class="card-hover rounded-2xl border border-slate-100 bg-white p-5 shadow-soft">
+      <p class="text-sm font-medium text-slate-500">Avg. Probability</p>
+      <p id="avg-probability" class="mt-2 text-3xl font-bold text-brand-600">-</p>
+      <p class="mt-1 text-xs text-slate-400">Across all predictions</p>
+    </div>
+    <div class="card-hover rounded-2xl border border-slate-100 bg-white p-5 shadow-soft">
+      <p class="text-sm font-medium text-slate-500">This Month</p>
+      <p id="monthly-predictions" class="mt-2 text-3xl font-bold text-slate-900">-</p>
+      <p class="mt-1 text-xs text-slate-400">Recent activity</p>
+    </div>
+  </div>
+
+  <!-- Filters and Search -->
+  <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
+      <div class="relative">
+        <input id="search-input" type="text" placeholder="Search predictions..." class="w-full rounded-xl border border-slate-200 bg-white px-4 py-2 pl-10 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 sm:w-64">
+        <svg class="absolute left-3 top-2.5 h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+      <select id="filter-result" class="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20">
+        <option value="">All Results</option>
+        <option value="Success">Success Only</option>
+        <option value="Failure">Needs Attention Only</option>
+      </select>
+      <select id="sort-by" class="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20">
+        <option value="date-desc">Newest First</option>
+        <option value="date-asc">Oldest First</option>
+        <option value="probability-desc">Highest Probability</option>
+        <option value="probability-asc">Lowest Probability</option>
+      </select>
+    </div>
+    <div class="flex gap-2">
+      <button id="export-btn" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 shadow-sm transition hover:bg-slate-50">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        Export CSV
+      </button>
+      <button id="open-chat-btn" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 shadow-sm transition hover:bg-slate-50">
+        <span>💬</span>
+        Ask CleverFund AI
+      </button>
+    </div>
+  </div>
+
+  <!-- Predictions List -->
+  <div class="space-y-4">
+    <div id="predictions-loading" class="text-center py-8">
+      <div class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-slate-200 border-t-brand-600"></div>
+      <p class="mt-2 text-sm text-slate-500">Loading predictions...</p>
+    </div>
+
+    <div id="predictions-empty" class="hidden text-center py-12">
+      <div class="mx-auto h-12 w-12 text-slate-400">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+        </svg>
+      </div>
+      <h3 class="mt-2 text-sm font-medium text-slate-900">No predictions yet</h3>
+      <p class="mt-1 text-sm text-slate-500">Start by making your first startup prediction.</p>
+      <div class="mt-6">
+        <a href="/" class="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700">
+          Make First Prediction
+        </a>
+      </div>
+    </div>
+
+    <div id="predictions-list" class="space-y-4">
+      <!-- Predictions will be populated by JavaScript -->
+    </div>
+
+    <!-- Dataset Insights quick button -->
+    <div class="mt-4">
+      <button id="dataset-insights-btn" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 shadow-sm transition hover:bg-slate-50">
+        🤖 AI Dataset Insights
+      </button>
+      <div id="dataset-insights-container" class="mt-3 hidden p-4 rounded-lg border border-slate-100 bg-slate-50 text-sm text-slate-700"></div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div id="pagination" class="hidden flex items-center justify-between">
+    <div class="text-sm text-slate-500">
+      Showing <span id="showing-start">1</span> to <span id="showing-end">10</span> of <span id="total-count">0</span> predictions
+    </div>
+    <div class="flex items-center gap-2">
+      <button id="prev-page" class="rounded-lg border border-slate-200 px-3 py-1 text-sm text-slate-600 hover:bg-slate-50 disabled:opacity-50" disabled>Previous</button>
+      <span id="current-page" class="text-sm font-medium text-slate-900">1</span>
+      <button id="next-page" class="rounded-lg border border-slate-200 px-3 py-1 text-sm text-slate-600 hover:bg-slate-50 disabled:opacity-50">Next</button>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  let predictions = [];
+  let filteredPredictions = [];
+  let currentPage = 1;
+  const itemsPerPage = 10;
+
+  const searchInput = document.getElementById('search-input');
+  const filterResult = document.getElementById('filter-result');
+  const sortBy = document.getElementById('sort-by');
+  const exportBtn = document.getElementById('export-btn');
+  const predictionsList = document.getElementById('predictions-list');
+  const loadingDiv = document.getElementById('predictions-loading');
+  const emptyDiv = document.getElementById('predictions-empty');
+  const paginationDiv = document.getElementById('pagination');
+
+  // Load predictions
+  loadPredictions();
+
+  // Event listeners
+  searchInput.addEventListener('input', debounce(filterAndDisplay, 300));
+  filterResult.addEventListener('change', filterAndDisplay);
+  sortBy.addEventListener('change', filterAndDisplay);
+  exportBtn.addEventListener('click', exportPredictions);
+
+  // Page-level dataset insights quick button
+  const dsBtnTop = document.getElementById('dataset-insights-btn');
+  if (dsBtnTop) {
+    dsBtnTop.addEventListener('click', () => {
+      const dsContainer = document.getElementById('dataset-insights-container');
+      if (window.CleverFundAI && window.CleverFundAI.initDatasetInsights) {
+        dsContainer.classList.remove('hidden');
+        CleverFundAI.initDatasetInsights(dsContainer);
+      } else {
+        dsContainer.classList.remove('hidden');
+        dsContainer.innerHTML = '<em>AI dataset insights unavailable.</em>';
+      }
+    });
+  }
+
+  document.getElementById('prev-page').addEventListener('click', () => changePage(currentPage - 1));
+  document.getElementById('next-page').addEventListener('click', () => changePage(currentPage + 1));
+
+  async function loadPredictions() {
+    try {
+      const response = await fetch('/api/prediction-history', {
+        credentials: 'same-origin'
+      });
+
+      if (response.status === 401) {
+        window.location.href = '/login';
+        return;
+      }
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to load predictions');
+      }
+
+      predictions = data.predictions || [];
+      updateStats();
+      filterAndDisplay();
+
+    } catch (error) {
+      console.error('Error loading predictions:', error);
+      predictionsList.innerHTML = '<div class="text-center py-8 text-red-600">Error loading predictions. Please try again.</div>';
+    } finally {
+      loadingDiv.classList.add('hidden');
+    }
+  }
+
+  function updateStats() {
+    const total = predictions.length;
+    const successes = predictions.filter(p => p.result === 'Success').length;
+    const successRate = total > 0 ? ((successes / total) * 100).toFixed(1) : '0.0';
+    const avgProb = total > 0 ? (predictions.reduce((sum, p) => sum + p.probability, 0) / total).toFixed(1) : '0.0';
+
+    // Monthly predictions (last 30 days)
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+    const monthly = predictions.filter(p => new Date(p.timestamp) > thirtyDaysAgo).length;
+
+    document.getElementById('total-predictions').textContent = total;
+    document.getElementById('success-rate').textContent = window.formatPercentage(successRate);
+    document.getElementById('avg-probability').textContent = window.formatPercentage(avgProb);
+    document.getElementById('monthly-predictions').textContent = monthly;
+  }
+
+  function filterAndDisplay() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const resultFilter = filterResult.value;
+    const sortOption = sortBy.value;
+
+    // Filter
+    filteredPredictions = predictions.filter(prediction => {
+      const matchesSearch = !searchTerm ||
+        prediction.name.toLowerCase().includes(searchTerm) ||
+        prediction.industry.toLowerCase().includes(searchTerm) ||
+        prediction.location.toLowerCase().includes(searchTerm);
+
+      const matchesResult = !resultFilter || prediction.result === resultFilter;
+
+      return matchesSearch && matchesResult;
+    });
+
+    // Sort
+    filteredPredictions.sort((a, b) => {
+      switch (sortOption) {
+        case 'date-asc':
+          return new Date(a.timestamp) - new Date(b.timestamp);
+        case 'date-desc':
+          return new Date(b.timestamp) - new Date(a.timestamp);
+        case 'probability-asc':
+          return a.probability - b.probability;
+        case 'probability-desc':
+          return b.probability - a.probability;
+        default:
+          return new Date(b.timestamp) - new Date(a.timestamp);
+      }
+    });
+
+    currentPage = 1;
+    displayPredictions();
+  }
+
+  function displayPredictions() {
+    if (filteredPredictions.length === 0) {
+      predictionsList.classList.add('hidden');
+      paginationDiv.classList.add('hidden');
+      emptyDiv.classList.remove('hidden');
+      return;
+    }
+
+    emptyDiv.classList.add('hidden');
+    predictionsList.classList.remove('hidden');
+
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const pagePredictions = filteredPredictions.slice(start, end);
+
+    predictionsList.innerHTML = '';
+
+    pagePredictions.forEach(prediction => {
+      const predictionEl = createPredictionElement(prediction);
+      predictionsList.appendChild(predictionEl);
+    });
+
+    updatePagination();
+  }
+
+  function createPredictionElement(prediction) {
+    const div = document.createElement('div');
+    div.className = 'rounded-2xl border border-slate-200 bg-white p-6 shadow-soft hover:shadow-md transition';
+
+    const date = new Date(prediction.timestamp).toLocaleDateString('en-IN', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+
+    div.innerHTML = `
+      <div class="flex items-start justify-between">
+        <div class="flex-1">
+          <div class="flex items-center gap-3 mb-2">
+            <h3 class="text-lg font-semibold text-slate-900">${prediction.name}</h3>
+            <span class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
+              prediction.result === 'Success' ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'
+            }">
+              ${prediction.result === 'Success' ? 'High Potential' : 'Needs Attention'}
+            </span>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-slate-600 mb-3">
+            <div>
+              <span class="font-medium">Industry:</span><br>
+              ${prediction.industry}
+            </div>
+            <div>
+              <span class="font-medium">Location:</span><br>
+              ${prediction.location}
+            </div>
+            <div>
+              <span class="font-medium">Funding:</span><br>
+              ${formatCurrency(prediction.funding)}
+            </div>
+            <div>
+              <span class="font-medium">Team:</span><br>
+              ${prediction.employees} members
+            </div>
+          </div>
+          <div class="flex items-center gap-4 text-sm">
+            <div class="flex items-center gap-2">
+              <div class="w-16 h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r ${
+                  prediction.result === 'Success' ? 'from-emerald-400 to-emerald-600' : 'from-rose-400 to-rose-600'
+                } rounded-full transition-all duration-500" style="width: ${prediction.probability}%"></div>
+              </div>
+              <span class="font-semibold text-slate-700">${prediction.probability}%</span>
+            </div>
+            <span class="text-slate-500">${date}</span>
+          </div>
+          <div class="mt-4 border-t border-slate-100 pt-4">
+            <button type="button" class="prediction-ai-btn inline-flex items-center gap-2 rounded-lg bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50" data-prediction-id="${prediction.id}">
+              <span>🤖</span> Generate AI Advisor
+            </button>
+            <div class="prediction-ai-container mt-3 hidden"></div>
+          </div>
+        </div>
+        <div class="ml-4">
+          <div class="flex flex-col items-end gap-2">
+            <button class="text-slate-400 hover:text-slate-600 p-1 delete-btn">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+            </svg>
+            </button>
+            <button class="text-sm rounded-lg bg-slate-50 px-3 py-1 text-slate-700 hover:bg-slate-100 ai-advisor-btn">
+              🤖 AI Advisor
+            </button>
+            <button class="text-sm rounded-lg bg-slate-50 px-3 py-1 text-slate-700 hover:bg-slate-100 dataset-insights-small-btn">
+              📊 Dataset Insights
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4" id="ai-container-placeholder"></div>
+    `;
+
+    // Attach event handlers
+    const deleteBtn = div.querySelector('button.delete-btn');
+    deleteBtn.addEventListener('click', () => deletePrediction(prediction.id));
+
+    // AI container (hidden until filled)
+    const aiContainer = div.querySelector('#ai-container-placeholder');
+    aiContainer.classList.add('hidden');
+
+    const aiBtn = div.querySelector('.ai-advisor-btn');
+    aiBtn.addEventListener('click', () => {
+      const startupData = {
+        name: prediction.name,
+        startup_name: prediction.name,
+        industry: prediction.industry,
+        location: prediction.location,
+        funding: prediction.funding,
+        funding_amount: prediction.funding,
+        employees: prediction.employees,
+        num_employees: prediction.employees,
+        revenue: prediction.revenue || 0,
+        funding_round: prediction.funding_round || null,
+        years_operation: prediction.years_operation || null
+      };
+
+      const advisorButton = div.querySelector('.prediction-ai-btn');
+      const advisorContainer = div.querySelector('.prediction-ai-container');
+      advisorButton.addEventListener('click', async () => {
+        if (!window.CleverFundAI || !window.CleverFundAI.initAIAdvisor) {
+          advisorContainer.classList.remove('hidden');
+          advisorContainer.textContent = 'AI Advisor is unavailable on this page.';
+          return;
+        }
+
+        advisorButton.disabled = true;
+        advisorButton.textContent = 'Generating AI Advisor...';
+        advisorContainer.classList.remove('hidden');
+        const startupData = {
+          startup_name: prediction.name,
+          industry: prediction.industry,
+          location: prediction.location,
+          funding_amount: prediction.funding,
+          revenue: prediction.revenue || 0,
+          employees: prediction.employees || 0
+        };
+        const mlResult = {
+          prediction: prediction.result,
+          success_probability: Number(prediction.probability) || 0,
+          failure_probability: Math.max(0, 100 - (Number(prediction.probability) || 0)),
+          confidence: Number(prediction.probability) || 0
+        };
+        try {
+          await window.CleverFundAI.initAIAdvisor(advisorContainer, startupData, mlResult);
+          advisorButton.textContent = 'Refresh AI Advisor';
+        } catch (error) {
+          advisorContainer.classList.remove('hidden');
+          advisorContainer.textContent = 'AI Advisor is currently unavailable. Please make sure Ollama is running. Your prediction is still available.';
+          advisorButton.textContent = 'Try AI Advisor Again';
+        } finally {
+          advisorButton.disabled = false;
+        }
+      });
+      const mlResult = {
+        prediction: prediction.result,
+        success_probability: prediction.probability,
+        failure_probability: 100 - prediction.probability,
+        confidence: prediction.probability
+      };
+      CleverFundAI.initAIAdvisor(aiContainer, startupData, mlResult);
+    });
+
+    const dsBtn = div.querySelector('.dataset-insights-small-btn');
+    dsBtn.addEventListener('click', () => {
+      CleverFundAI.initDatasetInsights(aiContainer);
+    });
+
+    return div;
+  }
+
+  async function fetchAIAnalysisForPrediction(pred, container) {
+    // Legacy function - now handled by CleverFundAI module
+    const startupData = {
+      name: pred.name,
+      startup_name: pred.name,
+      industry: pred.industry,
+      location: pred.location,
+      funding_amount: pred.funding,
+      employees: pred.employees,
+      revenue: pred.revenue || 0
+    };
+    const mlResult = {
+      prediction: pred.result,
+      success_probability: pred.probability
+    };
+    CleverFundAI.initAIAdvisor(container, startupData, mlResult);
+  }
+
+  async function fetchDatasetInsightsForPrediction(pred, container) {
+    // Legacy function - now handled by CleverFundAI module
+    CleverFundAI.initDatasetInsights(container);
+  }
+
+  function renderAIAnalysis(container, analysis) {
+    // Legacy function - no longer needed
+  }
+
+  function escapeHtml(unsafe) {
+      const s = (unsafe === null || unsafe === undefined) ? '' : String(unsafe);
+      return s
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+  }
+
+  function updatePagination() {
+    const totalPages = Math.ceil(filteredPredictions.length / itemsPerPage);
+
+    if (totalPages <= 1) {
+      paginationDiv.classList.add('hidden');
+      return;
+    }
+
+    paginationDiv.classList.remove('hidden');
+
+    const start = (currentPage - 1) * itemsPerPage + 1;
+    const end = Math.min(currentPage * itemsPerPage, filteredPredictions.length);
+
+    document.getElementById('showing-start').textContent = start;
+    document.getElementById('showing-end').textContent = end;
+    document.getElementById('total-count').textContent = filteredPredictions.length;
+    document.getElementById('current-page').textContent = currentPage;
+
+    document.getElementById('prev-page').disabled = currentPage === 1;
+    document.getElementById('next-page').disabled = currentPage === totalPages;
+  }
+
+  function changePage(page) {
+    const totalPages = Math.ceil(filteredPredictions.length / itemsPerPage);
+    if (page < 1 || page > totalPages) return;
+
+    currentPage = page;
+    displayPredictions();
+  }
+
+  function exportPredictions() {
+    if (filteredPredictions.length === 0) {
+      alert('No predictions to export');
+      return;
+    }
+
+    const csvContent = [
+      ['Name', 'Industry', 'Location', 'Funding', 'Employees', 'Revenue', 'Probability', 'Result', 'Date'],
+      ...filteredPredictions.map(p => [
+        p.name,
+        p.industry,
+        p.location,
+        p.funding,
+        p.employees,
+        p.revenue || '',
+        p.probability,
+        p.result,
+        p.timestamp
+      ])
+    ].map(row => row.map(field => `"${field}"`).join(',')).join('\n');
+
+    const blob = new Blob([csvContent], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'predictions.csv';
+    a.click();
+    window.URL.revokeObjectURL(url);
+  }
+
+  function formatCurrency(num) {
+    if (num >= 1_000_000) return '₹' + (num / 1_000_000).toFixed(1) + 'M';
+    if (num >= 1_000) return '₹' + (num / 1_000).toFixed(0) + 'K';
+    return '₹' + num.toFixed(0);
+  }
+
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+
+  // Chat modal handler
+  const chatBtn = document.getElementById('open-chat-btn');
+  const chatModal = document.getElementById('chat-modal');
+  const chatPanelContainer = document.getElementById('chat-panel-container');
+
+  if (chatBtn) {
+    chatBtn.addEventListener('click', () => {
+      // Use the most recent prediction or ask for generic guidance
+      if (predictions && predictions.length > 0) {
+        const latestPred = predictions[0]; // Most recent
+        const startupData = {
+          name: latestPred.name,
+          startup_name: latestPred.name,
+          industry: latestPred.industry,
+          location: latestPred.location,
+          funding: latestPred.funding,
+          funding_amount: latestPred.funding,
+          employees: latestPred.employees,
+          num_employees: latestPred.employees,
+          revenue: latestPred.revenue || 0
+        };
+        const mlResult = {
+          prediction: latestPred.result,
+          success_probability: latestPred.probability
+        };
+        
+        chatPanelContainer.innerHTML = '';
+        if (window.CleverFundAI && window.CleverFundAI.initChatPanel) {
+          CleverFundAI.initChatPanel(chatPanelContainer, startupData, mlResult);
+        }
+        chatModal.classList.remove('hidden');
+      } else {
+        chatPanelContainer.innerHTML = `
+          <div class="p-6 text-center">
+            <p class="text-slate-600">No predictions found. Create a prediction first to ask AI questions about it.</p>
+            <button onclick="document.getElementById('chat-modal').classList.add('hidden')" class="mt-4 inline-block rounded-lg bg-brand-600 text-white px-4 py-2">Close</button>
+          </div>
+        `;
+        chatModal.classList.remove('hidden');
+      }
+    });
+  }
+
+  // Close modal when clicking outside
+  if (chatModal) {
+    chatModal.addEventListener('click', (e) => {
+      if (e.target === chatModal) {
+        chatModal.classList.add('hidden');
+      }
+    });
+  }
+});
+
+// Delete prediction function (global scope for onclick)
+async function deletePrediction(predictionId) {
+  if (!confirm('Are you sure you want to delete this prediction?')) return;
+
+  try {
+    const response = await fetch(`/api/prediction-history/${predictionId}`, {
+      method: 'DELETE',
+      credentials: 'same-origin'
+    });
+
+    if (response.ok) {
+      location.reload();
+    } else {
+      alert('Failed to delete prediction');
+    }
+  } catch (error) {
+    alert('Error deleting prediction');
+  }
+}
+</script>
+
+<!-- Chat Modal -->
+<div id="chat-modal" class="hidden fixed inset-0 bg-black/30 z-50 flex items-end sm:items-center sm:justify-center">
+  <div class="w-full sm:w-96 max-h-[80vh] bg-white rounded-t-2xl sm:rounded-2xl shadow-2xl flex flex-col">
+    <div id="chat-panel-container"></div>
+  </div>
+</div>
+
+{% endblock %}

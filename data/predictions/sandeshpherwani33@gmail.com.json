@@ -1,0 +1,1104 @@
+[
+  {
+    "id": "f83063be-514a-41ca-8f9b-2481197f871a",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-09T12:46:40.626744",
+    "data": {
+      "funding_amount": 10000000.0,
+      "employees": 25,
+      "industry": "Finance",
+      "revenue": 13500000.0,
+      "location": "Mumbai",
+      "probability": 78,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 2.5,
+        "revenue": 25.0,
+        "industry": 15,
+        "location": 10,
+        "total": 77.5
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 32.25806451612903,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 3.225806451612903,
+          "score": 2.5
+        },
+        {
+          "feature": "Revenue",
+          "value": 32.25806451612903,
+          "score": 25.0
+        },
+        {
+          "feature": "Industry",
+          "value": 19.35483870967742,
+          "score": 15
+        },
+        {
+          "feature": "Location",
+          "value": 12.903225806451612,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        }
+      ]
+    }
+  },
+  {
+    "id": "1c268d51-364b-4130-ad75-c279c9387b77",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-09T13:05:40.193010",
+    "data": {
+      "funding_amount": 1000000.0,
+      "employees": 25,
+      "industry": "Finance",
+      "revenue": 1350000.0,
+      "location": "Mumbai",
+      "probability": 36,
+      "result": "Failure",
+      "scores": {
+        "funding": 5.0,
+        "team": 2.5,
+        "revenue": 3.375,
+        "industry": 15,
+        "location": 10,
+        "total": 35.875
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 13.937282229965156,
+          "score": 5.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 6.968641114982578,
+          "score": 2.5
+        },
+        {
+          "feature": "Revenue",
+          "value": 9.40766550522648,
+          "score": 3.375
+        },
+        {
+          "feature": "Industry",
+          "value": 41.81184668989547,
+          "score": 15
+        },
+        {
+          "feature": "Location",
+          "value": 27.874564459930312,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "e12f5029-21e4-42a1-ba8a-cfa70cb89a8b",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-09T13:13:25.733770",
+    "data": {
+      "funding_amount": 500000.0,
+      "employees": 25,
+      "industry": "Finance",
+      "revenue": 675000.0,
+      "location": "Mumbai",
+      "probability": 32,
+      "result": "Failure",
+      "scores": {
+        "funding": 2.5,
+        "team": 2.5,
+        "revenue": 1.6875,
+        "industry": 15,
+        "location": 10,
+        "total": 31.6875
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 7.889546351084813,
+          "score": 2.5
+        },
+        {
+          "feature": "Team Size",
+          "value": 7.889546351084813,
+          "score": 2.5
+        },
+        {
+          "feature": "Revenue",
+          "value": 5.325443786982249,
+          "score": 1.6875
+        },
+        {
+          "feature": "Industry",
+          "value": 47.337278106508876,
+          "score": 15
+        },
+        {
+          "feature": "Location",
+          "value": 31.558185404339252,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "5750ed3c-84b7-4f4c-83f5-85c3e746d2e9",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-09T13:16:16.576156",
+    "data": {
+      "funding_amount": 10000.0,
+      "employees": 25,
+      "industry": "Finance",
+      "revenue": 13500.0,
+      "location": "Mumbai",
+      "probability": 28,
+      "result": "Failure",
+      "scores": {
+        "funding": 0.05,
+        "team": 2.5,
+        "revenue": 0.03375,
+        "industry": 15,
+        "location": 10,
+        "total": 27.58375
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 0.18126614401595145,
+          "score": 0.05
+        },
+        {
+          "feature": "Team Size",
+          "value": 9.06330720079757,
+          "score": 2.5
+        },
+        {
+          "feature": "Revenue",
+          "value": 0.12235464721076722,
+          "score": 0.03375
+        },
+        {
+          "feature": "Industry",
+          "value": 54.37984320478543,
+          "score": 15
+        },
+        {
+          "feature": "Location",
+          "value": 36.25322880319028,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "ba933e23-70a9-4695-aa0d-ecdaf499896e",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-09T13:21:16.580627",
+    "data": {
+      "funding_amount": 100000.0,
+      "employees": 25,
+      "industry": "Finance",
+      "revenue": 135000.0,
+      "location": "Mumbai",
+      "probability": 28,
+      "result": "Failure",
+      "scores": {
+        "funding": 0.5,
+        "team": 2.5,
+        "revenue": 0.3375,
+        "industry": 15,
+        "location": 10,
+        "total": 28.3375
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 1.76444640494045,
+          "score": 0.5
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.82223202470225,
+          "score": 2.5
+        },
+        {
+          "feature": "Revenue",
+          "value": 1.1910013233348038,
+          "score": 0.3375
+        },
+        {
+          "feature": "Industry",
+          "value": 52.9333921482135,
+          "score": 15
+        },
+        {
+          "feature": "Location",
+          "value": 35.288928098809,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "8a7a115b-23da-4c42-a5db-4858bc9c5a6a",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-09T13:25:19.167023",
+    "data": {
+      "funding_amount": 10000.0,
+      "employees": 25,
+      "industry": "Finance",
+      "revenue": 13500.0,
+      "location": "Mumbai",
+      "probability": 28,
+      "result": "Failure",
+      "scores": {
+        "funding": 0.05,
+        "team": 2.5,
+        "revenue": 0.03375,
+        "industry": 15,
+        "location": 10,
+        "total": 27.58375
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 0.18126614401595145,
+          "score": 0.05
+        },
+        {
+          "feature": "Team Size",
+          "value": 9.06330720079757,
+          "score": 2.5
+        },
+        {
+          "feature": "Revenue",
+          "value": 0.12235464721076722,
+          "score": 0.03375
+        },
+        {
+          "feature": "Industry",
+          "value": 54.37984320478543,
+          "score": 15
+        },
+        {
+          "feature": "Location",
+          "value": 36.25322880319028,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "a21cd015-b731-4fbe-bb93-6ba32c4dbb41",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-09T13:39:28.354162",
+    "data": {
+      "funding_amount": 10000000.0,
+      "employees": 25,
+      "industry": "Finance",
+      "revenue": 13500000.0,
+      "location": "Mumbai",
+      "probability": 78,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 2.5,
+        "revenue": 25.0,
+        "industry": 15,
+        "location": 10,
+        "total": 77.5
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 32.25806451612903,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 3.225806451612903,
+          "score": 2.5
+        },
+        {
+          "feature": "Revenue",
+          "value": 32.25806451612903,
+          "score": 25.0
+        },
+        {
+          "feature": "Industry",
+          "value": 19.35483870967742,
+          "score": 15
+        },
+        {
+          "feature": "Location",
+          "value": 12.903225806451612,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        }
+      ]
+    }
+  },
+  {
+    "id": "2333bd42-126f-474f-90d2-04f00d7ae1f4",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-09T20:58:58.701360",
+    "data": {
+      "funding_amount": 10000000.0,
+      "employees": 25,
+      "industry": "Finance",
+      "revenue": 13500000.0,
+      "location": "Mumbai",
+      "probability": 78,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 2.5,
+        "revenue": 25.0,
+        "industry": 15,
+        "location": 10,
+        "total": 77.5
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 32.25806451612903,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 3.225806451612903,
+          "score": 2.5
+        },
+        {
+          "feature": "Revenue",
+          "value": 32.25806451612903,
+          "score": 25.0
+        },
+        {
+          "feature": "Industry",
+          "value": 19.35483870967742,
+          "score": 15
+        },
+        {
+          "feature": "Location",
+          "value": 12.903225806451612,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        }
+      ]
+    }
+  },
+  {
+    "id": "807fd8b4-8d61-45bc-b5de-4af0d443de15",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-10T00:38:20.791903",
+    "data": {
+      "funding_amount": 1000000.0,
+      "employees": 30,
+      "industry": "Finance",
+      "revenue": 1350000.0,
+      "location": "Mumbai",
+      "probability": 68,
+      "result": "Success",
+      "confidence": 68.60540540540539,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "dd2ec104-9ef2-4022-84cb-0b56a5299297",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-10T00:44:15.128992",
+    "data": {
+      "funding_amount": 10000000.0,
+      "employees": 30,
+      "industry": "Finance",
+      "revenue": 13500000.0,
+      "location": "Mumbai",
+      "probability": 61,
+      "result": "Success",
+      "confidence": 61.74270699270698,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "acef214b-818f-4e49-a140-8786885f4fc1",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-10T09:43:50.277014",
+    "data": {
+      "funding_amount": 10000000.0,
+      "employees": 25,
+      "industry": "Finance",
+      "revenue": 13500000.0,
+      "location": "Mumbai",
+      "probability": 78,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 2.5,
+        "revenue": 25.0,
+        "industry": 15,
+        "location": 10,
+        "total": 77.5
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 32.25806451612903,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 3.225806451612903,
+          "score": 2.5
+        },
+        {
+          "feature": "Revenue",
+          "value": 32.25806451612903,
+          "score": 25.0
+        },
+        {
+          "feature": "Industry",
+          "value": 19.35483870967742,
+          "score": 15
+        },
+        {
+          "feature": "Location",
+          "value": 12.903225806451612,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        }
+      ]
+    }
+  },
+  {
+    "id": "dbf29fc7-02b0-42f7-a6e1-58be92b63f08",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-10T09:44:21.671920",
+    "data": {
+      "funding_amount": 10000000.0,
+      "employees": 25,
+      "industry": "Finance",
+      "revenue": 13500000.0,
+      "location": "Mumbai",
+      "probability": 61,
+      "result": "Success",
+      "confidence": 61.742706992706985,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "b66bf564-4222-4dfc-8d04-ea7cad177863",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-10T09:46:56.306797",
+    "data": {
+      "funding_amount": 100000.0,
+      "employees": 25,
+      "industry": "Finance",
+      "revenue": 135000.0,
+      "location": "Mumbai",
+      "probability": 28,
+      "result": "Failure",
+      "scores": {
+        "funding": 0.5,
+        "team": 2.5,
+        "revenue": 0.3375,
+        "industry": 15,
+        "location": 10,
+        "total": 28.3375
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 1.76444640494045,
+          "score": 0.5
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.82223202470225,
+          "score": 2.5
+        },
+        {
+          "feature": "Revenue",
+          "value": 1.1910013233348038,
+          "score": 0.3375
+        },
+        {
+          "feature": "Industry",
+          "value": 52.9333921482135,
+          "score": 15
+        },
+        {
+          "feature": "Location",
+          "value": 35.288928098809,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "d1d1fead-1860-45fd-8e49-9acad535acfd",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-10T09:56:16.690913",
+    "data": {
+      "funding_amount": 20000000.0,
+      "employees": 150,
+      "industry": "Other",
+      "revenue": 13500000.0,
+      "location": "Bengaluru",
+      "probability": 85,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 15.0,
+        "revenue": 25.0,
+        "industry": 10,
+        "location": 10,
+        "total": 85.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 29.411764705882355,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 17.647058823529413,
+          "score": 15.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 29.411764705882355,
+          "score": 25.0
+        },
+        {
+          "feature": "Industry",
+          "value": 11.76470588235294,
+          "score": 10
+        },
+        {
+          "feature": "Location",
+          "value": 11.76470588235294,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "industry",
+          "priority": "medium",
+          "title": "Industry Focus",
+          "description": "Consider pivoting to high-growth industries like Technology or Healthcare.",
+          "suggestion": "Tech and Healthcare sectors show higher success rates in our data."
+        }
+      ]
+    }
+  },
+  {
+    "id": "0ee8721b-54ed-4b3b-87dd-56975b605ee9",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-10T13:04:27.803457",
+    "data": {
+      "funding_amount": 100000.0,
+      "employees": 35,
+      "industry": "Finance",
+      "revenue": 135000.0,
+      "location": "Mumbai",
+      "probability": 29,
+      "result": "Failure",
+      "scores": {
+        "funding": 0.5,
+        "team": 3.5,
+        "revenue": 0.3375,
+        "industry": 15,
+        "location": 10,
+        "total": 29.3375
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 1.704303365999148,
+          "score": 0.5
+        },
+        {
+          "feature": "Team Size",
+          "value": 11.930123561994035,
+          "score": 3.5
+        },
+        {
+          "feature": "Revenue",
+          "value": 1.1504047720494248,
+          "score": 0.3375
+        },
+        {
+          "feature": "Industry",
+          "value": 51.12910097997444,
+          "score": 15
+        },
+        {
+          "feature": "Location",
+          "value": 34.08606731998296,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "967d83ea-7e0b-4c88-978a-42eb11f101cc",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-10T13:05:25.617539",
+    "data": {
+      "funding_amount": 100000.0,
+      "employees": 35,
+      "industry": "Finance",
+      "revenue": 135000.0,
+      "location": "Mumbai",
+      "probability": 63,
+      "result": "Success",
+      "confidence": 63.75064350064351,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "ba8dc6c0-7817-4753-ae11-581ae431ad40",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-11T10:16:26.214366",
+    "data": {
+      "funding_amount": 1000000000.0,
+      "employees": 25,
+      "industry": "Finance",
+      "revenue": 1350000000.0,
+      "location": "Mumbai",
+      "probability": 78,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 2.5,
+        "revenue": 25.0,
+        "industry": 15,
+        "location": 10,
+        "total": 77.5
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 32.25806451612903,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 3.225806451612903,
+          "score": 2.5
+        },
+        {
+          "feature": "Revenue",
+          "value": 32.25806451612903,
+          "score": 25.0
+        },
+        {
+          "feature": "Industry",
+          "value": 19.35483870967742,
+          "score": 15
+        },
+        {
+          "feature": "Location",
+          "value": 12.903225806451612,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        }
+      ]
+    }
+  },
+  {
+    "id": "03923ed9-5aad-4a3d-91a9-a4fb44bf33d5",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-04-11T10:16:29.883453",
+    "data": {
+      "funding_amount": 1000000000.0,
+      "employees": 25,
+      "industry": "Finance",
+      "revenue": 1350000000.0,
+      "location": "Mumbai",
+      "probability": 78,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 2.5,
+        "revenue": 25.0,
+        "industry": 15,
+        "location": 10,
+        "total": 77.5
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 32.25806451612903,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 3.225806451612903,
+          "score": 2.5
+        },
+        {
+          "feature": "Revenue",
+          "value": 32.25806451612903,
+          "score": 25.0
+        },
+        {
+          "feature": "Industry",
+          "value": 19.35483870967742,
+          "score": 15
+        },
+        {
+          "feature": "Location",
+          "value": 12.903225806451612,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        }
+      ]
+    }
+  },
+  {
+    "id": "0d894797-4208-4f99-b44f-4f1642eaa5bc",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-10-13T20:59:14.303050",
+    "data": {
+      "funding_amount": 10000.0,
+      "employees": 80,
+      "industry": "Healthcare",
+      "revenue": 16500.0,
+      "location": "Mumbai",
+      "probability": 63,
+      "result": "Success",
+      "confidence": 63.26731016731018,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "cca3e729-0720-4c8d-b270-2be27c29f6d4",
+    "user_id": "sandeshpherwani33@gmail.com",
+    "timestamp": "2026-10-29T16:35:44.398879",
+    "data": {
+      "funding_amount": 10000000.0,
+      "employees": 80,
+      "industry": "Finance",
+      "revenue": 18000000.0,
+      "location": "Mumbai",
+      "probability": 61,
+      "result": "Success",
+      "confidence": 61.74270699270698,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "23bb345e-78a7-457f-a086-50cd1b7054ac",
+    "user_id": "trace@example.com",
+    "timestamp": "2026-09-03T12:34:32.370021",
+    "data": {
+      "funding_amount": 1000000.0,
+      "employees": 12,
+      "industry": "Technology / Software",
+      "revenue": 750000.0,
+      "location": "Bengaluru",
+      "probability": 66,
+      "result": "Success",
+      "confidence": 66.67738095238097,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "52dfc300-05f4-4984-bd18-2c6b27fccefd",
+    "user_id": "trace@example.com",
+    "timestamp": "2026-09-03T12:45:28.987156",
+    "data": {
+      "funding_amount": 1000000.0,
+      "employees": 12,
+      "industry": "Technology / Software",
+      "revenue": 750000.0,
+      "location": "Bengaluru",
+      "probability": 66,
+      "result": "Success",
+      "confidence": 66.67738095238097,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "e1c690ea-c352-4fb3-b44a-1ed25a9fe617",
+    "user_id": "trace@example.com",
+    "timestamp": "2026-09-03T12:46:44.086335",
+    "data": {
+      "funding_amount": 1000000.0,
+      "employees": 12,
+      "industry": "Technology / Software",
+      "revenue": 750000.0,
+      "location": "Bengaluru",
+      "probability": 66,
+      "result": "Success",
+      "confidence": 66.67738095238096,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "040ee923-df54-4063-bdf4-d66998d5fdff",
+    "user_id": "trace@example.com",
+    "timestamp": "2026-09-03T12:57:12.718769",
+    "data": {
+      "funding_amount": 1000000.0,
+      "employees": 12,
+      "industry": "Technology / Software",
+      "revenue": 750000.0,
+      "location": "Bengaluru",
+      "probability": 66,
+      "result": "Success",
+      "confidence": 66.67738095238096,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  }
+]

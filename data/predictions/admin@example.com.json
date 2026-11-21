@@ -1,0 +1,2090 @@
+[
+  {
+    "id": "32f93e1c-8f78-4606-8e66-302dbc03b57e",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-01T20:17:28.826488",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "6c506540-af24-4ef9-9dc7-f6065cdc190b",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-02T00:57:02.562035",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "2524dd92-fa6f-43ee-b6f2-03b5e1a920b1",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T09:46:28.154886",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "3614260d-11dd-4d9b-8eb9-b9d1342c559b",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T09:51:20.274470",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "8e5ff66e-7ecd-426c-8ae3-e0b2920c2bd1",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T09:53:26.310366",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "ab1e81a8-5580-4c0f-9b5f-50dd4228fb85",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T09:58:36.573452",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "154911bf-690c-4f0e-94ad-5f1cdb591f46",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T11:14:14.467397",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "2fb790c4-e667-4d19-8e01-500cac3a474f",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T11:16:09.711919",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "40835d4e-0e63-4e55-9035-ffe4ba029569",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T11:30:37.950394",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "05569343-575a-4dd7-8f58-6127c8b422a7",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T11:31:29.192981",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "8e2e8549-3304-4c82-a055-706499df0125",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T11:33:28.551207",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "03fa2bf3-b111-40dc-880a-86072f016de1",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T11:34:12.107934",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "bb9f492b-1b2c-41ed-8843-e32d7c268278",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T12:20:59.606424",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "c921f629-254b-47ba-be12-45207430c840",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T12:24:25.863679",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "c4ea3f0e-a5eb-4875-bcc0-7e5effd76f96",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T12:27:42.556223",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "229faf15-b547-478a-b8f2-8eacb93a7ebd",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T12:38:45.378040",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "c4536f04-2d73-4371-a490-02969a5869e4",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T12:47:14.323804",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "f6fb7c6d-21c1-451e-b176-bc4cf28ba1c0",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T12:54:19.025198",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "3b65dd25-a4a5-4ddb-a26a-23ac640a5f4d",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T13:00:10.636371",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "df7d4116-57a3-463f-8d5d-d181c16479dd",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T13:48:12.672068",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "becdfaa6-9f24-4c8d-9bac-85e9d31d20b8",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T13:59:17.570481",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "243605b9-d376-4155-875b-a1f376d3d616",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-09-03T14:04:55.649265",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "7baa6c3d-5370-416c-a428-f33e0f094015",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-10-03T14:44:00.111970",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "9cb0f3ad-2b29-4a2c-b4d6-ead7926d0f51",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-10-03T14:45:27.604061",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "44d5518f-b24d-40ad-89ae-b29fc3ee5864",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-10-03T14:46:49.192714",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "9d8bac0a-90a5-4e07-ad14-5d69d2613561",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-10-03T14:53:27.548351",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "dfe880ab-bbae-4e06-9c6d-1ca82ab5e0ad",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-10-03T15:15:32.240614",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "0939fd1c-c4e0-4e19-91cb-50b72e59c9a8",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-10-03T15:26:01.714261",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  },
+  {
+    "id": "957d35b9-985f-4031-8953-2d231492b3d5",
+    "user_id": "admin@example.com",
+    "timestamp": "2026-10-03T15:34:26.174412",
+    "data": {
+      "funding_amount": 5000000.0,
+      "employees": 50,
+      "industry": "Technology / Software",
+      "revenue": 2000000.0,
+      "location": "Bangalore",
+      "probability": 60,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 5.0,
+        "revenue": 5.0,
+        "industry": 20,
+        "location": 5,
+        "total": 60.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 41.66666666666667,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 8.333333333333332,
+          "score": 5.0
+        },
+        {
+          "feature": "Industry",
+          "value": 33.33333333333333,
+          "score": 20
+        },
+        {
+          "feature": "Location",
+          "value": 8.333333333333332,
+          "score": 5
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "team",
+          "priority": "high",
+          "title": "Expand Team Size",
+          "description": "Team size is below optimal levels for your industry.",
+          "suggestion": "Aim for 50+ employees to strengthen your operational capacity."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        },
+        {
+          "type": "location",
+          "priority": "medium",
+          "title": "Strategic Location",
+          "description": "Your location may not be optimal for startup success.",
+          "suggestion": "Consider relocating to major tech hubs like San Francisco, New York, or Bangalore."
+        }
+      ]
+    }
+  }
+]

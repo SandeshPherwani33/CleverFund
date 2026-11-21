@@ -1,0 +1,320 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — CleverFund{% endblock %}
+
+{% block content %}
+        <section id="dashboard" class="space-y-5 pt-2">
+          <div>
+            <h2 class="text-2xl font-semibold text-slate-900">Dashboard</h2>
+            <p class="mt-1 text-sm text-slate-500">Live overview from your startup dataset and recent predictions.</p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <div class="card-hover rounded-2xl border border-slate-100 bg-white p-5 shadow-soft">
+              <p class="text-sm font-medium text-slate-500">Total Startups</p>
+              <p id="stat-total" class="mt-2 text-3xl font-bold text-slate-900">-</p>
+              <p class="mt-1 text-xs text-slate-400">From uploaded dataset</p>
+            </div>
+            <div class="card-hover rounded-2xl border border-slate-100 bg-white p-5 shadow-soft">
+              <p class="text-sm font-medium text-slate-500">Success Rate</p>
+              <p id="stat-rate" class="mt-2 text-3xl font-bold text-brand-600">-</p>
+              <p class="mt-1 text-xs text-slate-400">Historical success labels</p>
+            </div>
+            <div class="card-hover rounded-2xl border border-slate-100 bg-white p-5 shadow-soft">
+              <p class="text-sm font-medium text-slate-500">Failed Startups</p>
+              <p id="stat-failed" class="mt-2 text-3xl font-bold text-slate-900">-</p>
+              <p class="mt-1 text-xs text-slate-400">Rows with failure outcome</p>
+            </div>
+            <div class="card-hover rounded-2xl border border-slate-100 bg-white p-5 shadow-soft">
+              <p class="text-sm font-medium text-slate-500">Predictions Run</p>
+              <p id="stat-predictions" class="mt-2 text-3xl font-bold text-slate-900">0</p>
+              <p class="mt-1 text-xs text-slate-400">Current session count</p>
+            </div>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-3">
+            <article class="lg:col-span-2 rounded-2xl border border-slate-100 bg-white p-6 shadow-soft">
+              <h3 class="text-lg font-semibold text-slate-900">Startup Growth Trend</h3>
+              <p class="text-sm text-slate-500">How startup count evolves over indexed time points.</p>
+              <div class="mt-4 h-72">
+                <canvas id="growthChart"></canvas>
+              </div>
+            </article>
+            <article class="rounded-2xl border border-slate-100 bg-white p-6 shadow-soft">
+              <h3 class="text-lg font-semibold text-slate-900">Outcome Split</h3>
+              <p class="text-sm text-slate-500">Success vs failure distribution in dataset.</p>
+              <div class="mt-4 flex h-72 items-center justify-center">
+                <canvas id="outcomeChart"></canvas>
+              </div>
+            </article>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-2">
+            <article class="rounded-2xl border border-slate-100 bg-white p-6 shadow-soft">
+              <h3 class="text-lg font-semibold text-slate-900">Industry Distribution</h3>
+              <p class="text-sm text-slate-500">Most represented market sectors from your data.</p>
+              <div class="mt-4 h-72">
+                <canvas id="industryChart"></canvas>
+              </div>
+            </article>
+            <article class="rounded-2xl border border-slate-100 bg-white p-6 shadow-soft">
+              <h3 class="text-lg font-semibold text-slate-900">Funding vs Revenue Index</h3>
+              <p class="text-sm text-slate-500">Average indexed values by quarter group.</p>
+              <div class="mt-4 h-72">
+                <canvas id="fundingRevenueChart"></canvas>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="prediction" class="space-y-6 pt-2">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p class="text-sm text-slate-500">Dashboard <span class="mx-1">›</span> New Prediction</p>
+              <h1 class="mt-1 text-4xl font-bold tracking-tight text-slate-900">New Startup Prediction</h1>
+              <p class="mt-2 text-sm text-slate-500">Input operational and financial data to run the AI forecast model.</p>
+              <p id="dataset-banner" class="mt-3 hidden rounded-xl border border-amber-200 bg-amber-50 px-4 py-2 text-sm text-amber-900"></p>
+            </div>
+            <button type="button" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 shadow-sm transition hover:bg-slate-50">
+              <span>↥</span>
+              Import CSV
+            </button>
+          </div>
+
+          <div class="flex flex-col gap-6">
+            <article class="w-full rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+              <div class="flex items-center justify-between mb-6">
+                <h2 class="flex items-center gap-2 text-xl font-semibold text-slate-900">
+                  <span class="text-brand-600">📄</span>
+                  Startup Details
+                </h2>
+                <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-50 border border-slate-200">
+                  <span class="text-xs font-medium text-slate-600">Model:</span>
+                  <button id="model-toggle" type="button" 
+                    class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors ease-in-out focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 bg-slate-300"
+                    role="switch" aria-checked="false" aria-label="Toggle ML model">
+                    <span class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0" id="model-toggle-dot"></span>
+                  </button>
+                  <span id="model-label" class="text-xs font-medium text-slate-600">Rule-Based</span>
+                  <span id="model-info" class="ml-2 text-xs px-2 py-1 rounded bg-blue-50 text-blue-700 hidden">
+                    ML: SMOTE + RF
+                  </span>
+                </div>
+              </div>
+
+              <form id="predict-form" class="mt-6 grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label for="startup_name" class="mb-1.5 block text-sm font-medium text-slate-700">Startup Name</label>
+                  <input id="startup_name" type="text" placeholder="e.g. Velocity AI" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+                </div>
+                <div>
+                  <label for="market_sector" class="mb-1.5 block text-sm font-medium text-slate-700">Market Sector</label>
+                  <select id="market_sector" name="industry" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20">
+                    <option value="" selected disabled>Select a sector</option>
+                    <option value="Technology / Software">Technology / Software</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Retail">Retail</option>
+                    <option value="E-commerce">E-commerce</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="funding" class="mb-1.5 block text-sm font-medium text-slate-700">Funding Amount (INR)</label>
+                  <input id="funding" name="funding_amount" type="number" step="0.01" min="0" placeholder="0.00" required class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+                </div>
+                <div>
+                  <label for="location" class="mb-1.5 block text-sm font-medium text-slate-700">Location</label>
+                  <input id="location" name="location" type="text" placeholder="San Francisco, CA" required class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+                </div>
+                <div>
+                  <label for="employees" class="mb-1.5 block text-sm font-medium text-slate-700">Number of Employees</label>
+                  <input id="employees" name="employees" type="number" min="0" placeholder="e.g. 15" required class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+                </div>
+                <div>
+                  <label for="years_operation" class="mb-1.5 block text-sm font-medium text-slate-700">Years in Operation</label>
+                  <input id="years_operation" type="number" min="0" step="0.1" placeholder="e.g. 2.5" class="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-500/20" />
+                </div>
+
+                <div class="sm:col-span-2">
+                  <label for="document-file" class="mb-1.5 block text-sm font-medium text-slate-700">Startup data file</label>
+                  <div id="document-drop-zone" class="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-600 transition">
+                    <label for="document-file" class="inline-flex cursor-pointer items-center rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-50">
+                      <span>Upload Excel / PDF</span>
+                      <input id="document-file" type="file" accept=".pdf,.xlsx,.xls,application/pdf,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" class="sr-only" />
+                    </label>
+                    <span class="ml-2 text-xs text-slate-500">Drop a PDF, XLSX, or XLS file here (up to 10 MB)</span>
+                    <div id="document-selection" class="mt-2 hidden items-center justify-between gap-3">
+                      <p class="min-w-0 truncate text-xs text-slate-700"><span id="document-filename"></span> <span id="document-filesize" class="text-slate-500"></span></p>
+                      <button id="remove-document" type="button" class="shrink-0 text-xs font-medium text-rose-600 hover:text-rose-700">Remove</button>
+                    </div>
+                  </div>
+                  <div id="document-preview" class="mt-3 hidden rounded-xl border border-slate-200 bg-white p-4">
+                    <p id="document-preview-summary" class="mb-3 text-sm font-medium text-slate-700"></p>
+                    <div id="document-preview-records" class="space-y-4"></div>
+                  </div>
+                </div>
+
+                <div class="sm:col-span-2">
+                  <p class="mb-2 text-sm font-medium text-slate-700">Previous Funding Rounds</p>
+                  <div class="grid gap-2 sm:grid-cols-3">
+                    <label class="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700">
+                      <input type="radio" name="funding_round" value="Pre-seed" class="h-4 w-4 border-slate-300 text-brand-600 focus:ring-brand-500" checked />
+                      Pre-seed
+                    </label>
+                    <label class="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700">
+                      <input type="radio" name="funding_round" value="Seed" class="h-4 w-4 border-slate-300 text-brand-600 focus:ring-brand-500" />
+                      Seed
+                    </label>
+                    <label class="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700">
+                      <input type="radio" name="funding_round" value="Series A+" class="h-4 w-4 border-slate-300 text-brand-600 focus:ring-brand-500" />
+                      Series A+
+                    </label>
+                  </div>
+                </div>
+
+                <input id="revenue" name="revenue" type="hidden" value="0" />
+
+                <div class="sm:col-span-2 space-y-2 pt-2">
+                  <button type="submit" id="predict-btn" class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-brand-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+                    <span>⚡</span>
+                    <span id="btn-label">Predict Startup Success</span>
+                    <span id="btn-spinner" class="hidden h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
+                  </button>
+                  <p id="form-error" class="hidden text-sm text-rose-600"></p>
+                </div>
+              </form>
+            </article>
+
+            <aside class="w-full rounded-2xl border border-slate-200 bg-white shadow-soft">
+              <div class="border-b border-slate-100 px-5 py-4">
+                <h3 class="text-2xl font-semibold text-slate-900">Analysis Results</h3>
+              </div>
+
+              <div class="space-y-4 px-5 py-5">
+                <div class="flex justify-center">
+                  <div id="result-ring" class="result-ring" style="--ring-pct: 82;">
+                    <div class="result-ring-inner">
+                      <p class="leading-none">
+                        <span id="prob-value" class="text-5xl font-bold text-slate-900">82%</span>
+                      </p>
+                      <p id="prob-label" class="mt-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-slate-500">Success Prob.</p>
+                    </div>
+                  </div>
+                </div>
+                <p id="document-model-note" class="hidden text-center text-xs text-slate-500">Random Forest probability estimate; not calibrated.</p>
+
+                <div id="result-placeholder" class="text-center text-sm text-slate-500">Fill out the form and run prediction to update this analysis.</div>
+                <div id="result-panel" class="hidden space-y-3">
+                  <div id="document-results" class="hidden">
+                    <div class="mb-4">
+                      <h5 class="mb-2 text-sm font-semibold text-slate-800">Predicted outcomes (record counts)</h5>
+                      <div class="h-48"><canvas id="document-outcome-chart"></canvas></div>
+                    </div>
+                    <div id="document-results-table" class="overflow-x-auto"></div>
+                  </div>
+                  <div class="flex items-center justify-between text-sm">
+                    <span id="risk-label" class="text-slate-500">Risk Score</span>
+                    <span id="risk-score-value" class="font-semibold text-slate-800">Low (18/100)</span>
+                  </div>
+                  <div class="h-2 overflow-hidden rounded-full bg-slate-100">
+                    <div id="risk-progress" class="h-full rounded-full bg-brand-600 transition-all duration-500" style="width: 18%;"></div>
+                  </div>
+                  <div id="confidence-summary" class="flex items-center justify-between rounded-xl bg-slate-50 px-3 py-2">
+                    <div>
+                      <p class="text-sm font-semibold text-slate-800">Confidence Level</p>
+                      <p class="text-xs text-slate-500">Based on model scoring</p>
+                    </div>
+                    <p id="confidence-value" class="text-lg font-bold text-brand-600">90.5%</p>
+                  </div>
+                  <div>
+                    <span id="result-badge-container"><span id="result-badge" class="inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold">High Potential</span></span>
+                  </div>
+                  <div id="score-breakdown" class="hidden space-y-2 pt-3 border-t border-slate-200">
+                    <h5 class="text-sm font-semibold text-slate-800">Score Breakdown</h5>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                      <div><strong>Funding:</strong> <span id="funding-score">0</span></div>
+                      <div><strong>Team:</strong> <span id="team-score">0</span></div>
+                      <div><strong>Revenue:</strong> <span id="revenue-score">0</span></div>
+                      <div><strong>Industry:</strong> <span id="industry-score">0</span></div>
+                      <div class="col-span-2"><strong>Location:</strong> <span id="location-score">0</span></div>
+                    </div>
+                    <div class="text-xs text-slate-500 pt-1">
+                      <strong>Total Score:</strong> <span id="total-score">0</span>
+                    </div>
+                  </div>
+
+                  <!-- Feature Importance Chart -->
+                  <div id="feature-importance-section" class="hidden space-y-3 pt-3 border-t border-slate-200">
+                    <h5 id="feature-importance-title" class="text-sm font-semibold text-slate-800">Feature Importance</h5>
+                    <p id="feature-importance-description" class="text-xs text-slate-500">How much each factor contributed to this prediction</p>
+                    <div class="h-48">
+                      <canvas id="featureImportanceChart"></canvas>
+                    </div>
+                  </div>
+
+                  <!-- Recommendations -->
+                  <div id="recommendations-section" class="hidden space-y-3 pt-3 border-t border-slate-200">
+                    <h5 class="text-sm font-semibold text-slate-800">Smart Recommendations</h5>
+                    <p class="text-xs text-slate-500">AI-powered suggestions to improve your startup's success chances</p>
+                    <div id="recommendations-container" class="space-y-3"></div>
+                  </div>
+
+                  <div id="ai-advisor-section" class="hidden pt-3 border-t border-slate-200">
+                    <div id="ai-advisor-container"></div>
+                  </div>
+
+                  <div id="ask-cleverfund-section" class="hidden pt-3 border-t border-slate-200">
+                    <div id="ask-cleverfund-container"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="prediction-formula" class="border-t border-slate-100 px-5 py-4">
+                <h4 class="mb-3 text-sm font-semibold text-slate-900">Prediction Formula</h4>
+                <div class="space-y-2 text-xs text-slate-600">
+                  <div class="grid grid-cols-2 gap-2">
+                    <div>
+                      <strong>Funding Score:</strong><br>
+                      min(funding/₹5M, 1.0) × 25
+                    </div>
+                    <div>
+                      <strong>Team Score:</strong><br>
+                      min(employees/200, 1.0) × 20
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-2">
+                    <div>
+                      <strong>Revenue Score:</strong><br>
+                      min(revenue/₹10M, 1.0) × 25
+                    </div>
+                    <div>
+                      <strong>Industry Bonus:</strong><br>
+                      Tech: +20, Health/Finance: +15, Retail: +8, Other: +10
+                    </div>
+                  </div>
+                  <div>
+                    <strong>Location Bonus:</strong><br>
+                    Major hubs (SF, NYC, Boston, etc.): +10, Other: +5
+                  </div>
+                  <div class="pt-2 border-t border-slate-200">
+                    <strong>Total Score = Sum of all scores</strong><br>
+                    <strong>Probability = max(5%, min(100%, Total Score))</strong><br>
+                    <strong>Result = Success if ≥50%, Failure if &lt;50%</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3 border-t border-slate-100 px-5 py-4">
+                <button type="button" id="export-pdf-btn" class="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Export PDF</button>
+                <button type="button" id="share-report-btn" class="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Share Report</button>
+              </div>
+            </aside>
+          </div>
+
+        </section>
+{% endblock %}
+
+{% block scripts %}
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}

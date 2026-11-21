@@ -1,0 +1,23 @@
+# CleverFund Backend — Python dependencies
+# Install with: pip install -r requirements.txt
+
+# Web framework
+Flask==3.0.3
+Werkzeug==3.0.3         # included with Flask; provides password hashing
+
+# Data processing
+pandas>=2.2.3
+numpy==1.26.4
+openpyxl==3.1.2         # needed by pandas to read .xlsx files
+
+# Production server (optional but recommended)
+gunicorn==22.0.0
+
+# ── ML dependencies (only needed if you want the ML model toggle) ────────────
+scikit-learn==1.5.0
+imbalanced-learn==0.12.3   # SMOTE
+joblib==1.4.2
+
+pymongo==4.6.3
+openai>=1.30.0
+python-dotenv>=1.0.0

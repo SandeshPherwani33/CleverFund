@@ -1,0 +1,194 @@
+/**
+ * CleverFund — extra styles beyond Tailwind
+ * Animations and polish for a SaaS dashboard feel
+ */
+
+/* Sidebar entrance */
+.sidebar-animate {
+  animation: slideIn 0.45s ease-out both;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px -12px rgba(37, 99, 235, 0.15);
+}
+
+/* Nav items */
+.nav-item {
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Table row fade-in */
+.table-row-animate {
+  animation: fadeRow 0.35s ease both;
+}
+
+@keyframes fadeRow {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Probability number pulse when updated */
+.count-up {
+  animation: pop 0.45s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.6;
+  }
+  60% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Mobile drawer backdrop */
+#drawer-backdrop {
+  transition: opacity 0.2s ease;
+}
+
+/* Focus visible for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgb(37, 99, 235);
+  outline-offset: 2px;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Login page */
+.login-brand {
+  animation: fadeRow 0.5s ease both;
+}
+
+.login-card {
+  animation: slideIn 0.45s ease-out both;
+}
+
+/* Prediction result chart */
+.prediction-chart-container {
+  position: relative;
+}
+
+/* AI advisor layout and numeric alignment */
+.ai-analysis-card {
+  text-align: left;
+}
+
+.ai-analysis-title {
+  margin-bottom: 0.65rem;
+  letter-spacing: 0.01em;
+}
+
+.ai-analysis-content,
+.ai-follow-up-response {
+  font-variant-numeric: tabular-nums;
+  line-height: 1.6;
+  text-align: left;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.ai-analysis-content p,
+.ai-analysis-content li,
+.ai-analysis-content strong,
+.ai-follow-up-response {
+  font-variant-numeric: tabular-nums;
+}
+
+.ai-analysis-content ul,
+.ai-analysis-content ol {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.ai-analysis-content li + li {
+  margin-top: 0.35rem;
+}
+
+.ai-follow-up-input {
+  text-align: left;
+}
+
+@media (max-width: 640px) {
+  .ai-analysis-card {
+    padding: 1rem;
+  }
+}
+
+/* Prediction page result ring */
+.result-ring {
+  --ring-pct: 0;
+  width: 134px;
+  height: 134px;
+  border-radius: 9999px;
+  background: conic-gradient(rgb(37, 99, 235) calc(var(--ring-pct) * 1%), rgba(226, 232, 240, 0.95) 0);
+  display: grid;
+  place-items: center;
+}
+
+.result-ring-inner {
+  width: 112px;
+  height: 112px;
+  border-radius: 9999px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: inset 0 0 0 1px rgba(226, 232, 240, 0.8);
+  padding: 8px;
+  line-height: 1.1;
+}
+
+.result-ring-inner p {
+  margin: 0;
+  padding: 0;
+}
+
+.result-ring-inner span.text-5xl {
+  line-height: 1;
+  display: block;
+}
+
+.result-ring-inner span.text-2xl {
+  line-height: 1;
+  display: block;
+}
+
+.result-ring-inner p:last-child {
+  margin-top: 2px;
+}

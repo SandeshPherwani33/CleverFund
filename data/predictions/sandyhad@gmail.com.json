@@ -1,0 +1,444 @@
+[
+  {
+    "id": "9e8f70c8-3f0e-47f0-bb18-981bcedc62af",
+    "user_id": "sandyhad@gmail.com",
+    "timestamp": "2026-09-03T09:39:43.461886",
+    "data": {
+      "funding_amount": 100000000.0,
+      "employees": 50000,
+      "industry": "Other",
+      "revenue": 144000000.0,
+      "location": "mumbai",
+      "probability": 90,
+      "result": "Success",
+      "scores": {
+        "funding": 25.0,
+        "team": 20.0,
+        "revenue": 25.0,
+        "industry": 10,
+        "location": 10,
+        "total": 90.0
+      },
+      "feature_importance": [
+        {
+          "feature": "Funding",
+          "value": 27.77777777777778,
+          "score": 25.0
+        },
+        {
+          "feature": "Team Size",
+          "value": 22.22222222222222,
+          "score": 20.0
+        },
+        {
+          "feature": "Revenue",
+          "value": 27.77777777777778,
+          "score": 25.0
+        },
+        {
+          "feature": "Industry",
+          "value": 11.11111111111111,
+          "score": 10
+        },
+        {
+          "feature": "Location",
+          "value": 11.11111111111111,
+          "score": 10
+        }
+      ],
+      "recommendations": [
+        {
+          "type": "industry",
+          "priority": "medium",
+          "title": "Industry Focus",
+          "description": "Consider pivoting to high-growth industries like Technology or Healthcare.",
+          "suggestion": "Tech and Healthcare sectors show higher success rates in our data."
+        }
+      ]
+    }
+  },
+  {
+    "id": "73c5ef33-e4c6-40d7-a406-35014ba4c43a",
+    "user_id": "sandyhad@gmail.com",
+    "timestamp": "2026-09-03T09:40:38.021110",
+    "data": {
+      "funding_amount": 100000000.0,
+      "employees": 50000,
+      "industry": "Other",
+      "revenue": 144000000.0,
+      "location": "mumbai",
+      "probability": 58,
+      "result": "Success",
+      "confidence": 58.18015873015874,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "890ee845-5ca9-44b9-a22d-71c7f58b3229",
+    "user_id": "sandyhad@gmail.com",
+    "timestamp": "2026-09-03T12:50:04.431394",
+    "data": {
+      "funding_amount": 400000.0,
+      "employees": 555,
+      "industry": "Other",
+      "revenue": 660000.0,
+      "location": "Mumbai",
+      "probability": 66,
+      "result": "Success",
+      "confidence": 66.29404761904763,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "375d6793-2d2b-49f7-b83d-6fa5e6bafd7d",
+    "user_id": "sandyhad@gmail.com",
+    "timestamp": "2026-09-03T17:29:59.408599",
+    "data": {
+      "funding_amount": 1000000.0,
+      "employees": 700,
+      "industry": "Retail",
+      "revenue": 1650000.0,
+      "location": "Mumbai",
+      "probability": 65,
+      "result": "Success",
+      "confidence": 65.9411196911197,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "dd1c2fd6-0932-41ec-9bc3-8a752b78a9b9",
+    "user_id": "sandyhad@gmail.com",
+    "timestamp": "2026-10-03T14:50:12.640692",
+    "data": {
+      "funding_amount": 100000.0,
+      "employees": 50,
+      "industry": "Finance",
+      "revenue": 165000.0,
+      "location": "Mumbai",
+      "probability": 63,
+      "result": "Success",
+      "confidence": 63.917310167310184,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "7c9adce5-3357-4c0a-9e5e-42c29464c64d",
+    "user_id": "sandyhad@gmail.com",
+    "timestamp": "2026-10-03T14:54:34.456406",
+    "data": {
+      "funding_amount": 1000000.0,
+      "employees": 50,
+      "industry": "Finance",
+      "revenue": 1500000.0,
+      "location": "Mumbai",
+      "probability": 68,
+      "result": "Success",
+      "confidence": 68.6054054054054,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "9aa0df1f-3472-40d3-9b36-4c9e883bc6c9",
+    "user_id": "sandyhad@gmail.com",
+    "timestamp": "2026-10-03T15:08:28.939653",
+    "data": {
+      "funding_amount": 100000000.0,
+      "employees": 50,
+      "industry": "Finance",
+      "revenue": 150000000.0,
+      "location": "Mumbai",
+      "probability": 61,
+      "result": "Success",
+      "confidence": 61.742706992706985,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "7ce7bb7f-926b-4b51-adaa-2c5c2a675763",
+    "user_id": "sandyhad@gmail.com",
+    "timestamp": "2026-10-03T15:17:32.684013",
+    "data": {
+      "funding_amount": 10000000.0,
+      "employees": 50,
+      "industry": "Finance",
+      "revenue": 15000000.0,
+      "location": "Mumbai",
+      "probability": 61,
+      "result": "Success",
+      "confidence": 61.742706992706985,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "d9028fab-4478-4c05-8c2e-4e32c7e34ae5",
+    "user_id": "sandyhad@gmail.com",
+    "timestamp": "2026-10-03T15:21:56.679253",
+    "data": {
+      "funding_amount": 100000000.0,
+      "employees": 50,
+      "industry": "Finance",
+      "revenue": 150000000.0,
+      "location": "Mumbai",
+      "probability": 61,
+      "result": "Success",
+      "confidence": 61.74270699270698,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "89a4fa8a-4c68-4f4b-af6a-50cfafdba9fd",
+    "user_id": "sandyhad@gmail.com",
+    "timestamp": "2026-10-03T15:28:01.765993",
+    "data": {
+      "funding_amount": 1000000.0,
+      "employees": 40,
+      "industry": "Finance",
+      "revenue": 1500000.0,
+      "location": "Mumbai",
+      "probability": 68,
+      "result": "Success",
+      "confidence": 68.6054054054054,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "5e82b8c2-d58c-4fb0-85c0-9f4773b01f64",
+    "user_id": "sandyhad@gmail.com",
+    "timestamp": "2026-10-03T15:36:15.254819",
+    "data": {
+      "funding_amount": 1000000.0,
+      "employees": 70,
+      "industry": "Finance",
+      "revenue": 1500000.0,
+      "location": "Mumbai",
+      "probability": 68,
+      "result": "Success",
+      "confidence": 68.6054054054054,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "aabb2e56-3192-48c1-9182-7287162dca63",
+    "user_id": "sandyhad@gmail.com",
+    "timestamp": "2026-10-03T15:38:31.887429",
+    "data": {
+      "funding_amount": 1000000.0,
+      "employees": 70,
+      "industry": "Finance",
+      "revenue": 1500000.0,
+      "location": "Mumbai",
+      "probability": 68,
+      "result": "Success",
+      "confidence": 68.6054054054054,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  },
+  {
+    "id": "51389e7e-2224-4e42-9961-cdcdbc7773a3",
+    "user_id": "sandyhad@gmail.com",
+    "timestamp": "2026-10-03T15:39:14.492355",
+    "data": {
+      "funding_amount": 1000000.0,
+      "employees": 70,
+      "industry": "Finance",
+      "revenue": 1500000.0,
+      "location": "Mumbai",
+      "probability": 68,
+      "result": "Success",
+      "confidence": 68.6054054054054,
+      "model_type": "ML-RandomForest-SMOTE",
+      "recommendations": [
+        {
+          "type": "funding",
+          "priority": "high",
+          "title": "Increase Funding",
+          "description": "Your funding score is low. Consider raising more capital to improve success chances.",
+          "suggestion": "Target at least \u20b92.5M in funding for better market positioning."
+        },
+        {
+          "type": "revenue",
+          "priority": "high",
+          "title": "Revenue Growth",
+          "description": "Focus on revenue generation to improve financial stability.",
+          "suggestion": "Implement aggressive customer acquisition and monetization strategies."
+        }
+      ]
+    }
+  }
+]
